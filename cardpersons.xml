@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/фон_окна_01"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="125dp"
+            android:layout_height="149dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerInside" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_name"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/photo"
+            android:layout_alignParentTop="true"
+            android:text="Персонаж: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontFamily="@font/robotomedium"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_sword"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/photo"
+            android:layout_below="@+id/person_name"
+            android:text="Оружие: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontFamily="@font/robotomedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_elem"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/photo"
+            android:layout_below="@+id/person_sword"
+            android:text="Элемент: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontFamily="@font/robotomedium" />
+
+  </RelativeLayout>
+</androidx.cardview.widget.CardView>
