@@ -41,56 +41,57 @@ public class ThirdActivityPersons extends AppCompatActivity {
         Intent intentDet = new Intent(this, PersonActDetail.class);
         PersonsAdapter.OnStateClickListener stateClickListener = new PersonsAdapter.OnStateClickListener() {
             @Override
-            public void onStateClick(Persons state, int position) {
-                boo = 0;
-                switch (state.getName()) {
-                    case "Дилюк":
-                        boo = 1;
-                        intentDet.putExtra("pers", "Дилюк");
-                        startActivity(intentDet);
-                        break;
-                    case "Джинн":
-                        boo = 1;
-                        intentDet.putExtra("pers", "Джинн");
-                        startActivity(intentDet);
-                        break;
-                    case "Кэ Цин":
-                        intentDet.putExtra("pers", "Кэ цин");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Мона":
-                        intentDet.putExtra("pers", "Мона");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Ци-ци":
-                        intentDet.putExtra("pers", "Ци-ци");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Сяо":
-                        intentDet.putExtra("pers", "Сяо");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Гань Юй":
-                        intentDet.putExtra("pers", "Гань Юй");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Розария":
-                        intentDet.putExtra("pers", "Розария");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                    case "Саю":
-                        intentDet.putExtra("pers", "Саю");
-                        boo = 1;
-                        startActivity(intentDet);
-                        break;
-                }
-            }
+          public void onStateClick(Persons state, int position) {
+    boo = 0;
+    switch (state.getName()) {
+        case "Ділюк":
+            boo = 1;
+            intentDet.putExtra("pers", "Ділюк");
+            startActivity(intentDet);
+            break;
+        case "Джинн":
+            boo = 1;
+            intentDet.putExtra("pers", "Джинн");
+            startActivity(intentDet);
+            break;
+        case "Ке Цін":
+            intentDet.putExtra("pers", "Ке Цін");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Мона":
+            intentDet.putExtra("pers", "Мона");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Ці-ці":
+            intentDet.putExtra("pers", "Ці-ці");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Сяо":
+            intentDet.putExtra("pers", "Сяо");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Гань Юй":
+            intentDet.putExtra("pers", "Гань Юй");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Розарія":
+            intentDet.putExtra("pers", "Розарія");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+        case "Саю":
+            intentDet.putExtra("pers", "Саю");
+            boo = 1;
+            startActivity(intentDet);
+            break;
+    }
+}
+
         };
         adapter = new PersonsAdapter(this, states, stateClickListener);
         recyclerView.setAdapter(adapter);
