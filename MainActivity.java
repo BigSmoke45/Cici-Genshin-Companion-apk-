@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent5 = new Intent(this, PaimonTesting.class);
         boo = 0;
         setInitialData();
-        setTitle("Главная");
+        setTitle("Головна");
         Window window = MainActivity.this.getWindow();
 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -33,15 +33,15 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             @Override
             public void onStateClick(Category state, int position) {
                 switch (state.getName()) {
-                    case "Артефакты":
+                    case "Артефакти":
                         boo = 2;
                         startActivity(intent2);
                         break;
-                    case "Персонажи":
+                    case "Персонажі":
                         boo = 3;
                         startActivity(intent3);
                         break;
-                    case "Оружие":
+                    case "Зброя":
                         boo = 4;
                         startActivity(intent4);
                         break;
@@ -56,9 +56,9 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         recyclerView.setAdapter(adapter);
     }
     private void setInitialData(){
-        states.add(new Category ("Артефакты" , R.drawable.artifacttierlist));
-        states.add(new Category ("Персонажи", R.drawable.charactertierlist));
-        states.add(new Category ("Оружие", R.drawable.weapontierlist));
+        states.add(new Category ("Артефакти" , R.drawable.artifacttierlist));
+        states.add(new Category ("Персонажі", R.drawable.charactertierlist));
+        states.add(new Category ("Зброя", R.drawable.weapontierlist));
         states.add(new Category ("Пройти тест", R.drawable.testspai));
     }
     @Override
@@ -76,7 +76,7 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             case R.id.razr:
                 boo = 1;
                 startActivity(intentrazr);
-                //headerView.setText("Настройки");
+                //headerView.setText("Налаштування");
                 return true;
             case R.id.sait:
                 boo = 1;
@@ -85,7 +85,7 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             case R.id.exit:
                 stopService(new Intent(this, MyService.class));
                 finish();
-                //headerView.setText("Открыть");
+                //headerView.setText("Відкрити");
                 return true;
         }
         return super.onOptionsItemSelected(item);
