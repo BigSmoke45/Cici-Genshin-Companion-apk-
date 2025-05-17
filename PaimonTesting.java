@@ -34,20 +34,21 @@ public class PaimonTesting extends AppCompatActivity {
         super.onBackPressed();
         boo = 1;
     }
-    String[] questioins = {"Какой Глаз Бога у Моны?",
-            "Кого называют \"Нефритовое Равновесие Группировки Цисин\"?",
-            "Ученица и сборщица трав из хижины Бубу - это?..",
-            "Из какого региона Мона?",
-            "Каким оружием пользуется Джинн?",
-            "Какой Глаз Бога у Дилюка?"};
-    String[] answers = { "Анемо", "Пиро", "Электро", "Гидро",
-            "Кэ цин", "Мона", "Ци-ци", "Эмбер",
-            "Дилюк", "Ци-ци", "Мона", "Розария",
-            "Разлом", "Инадзума", "Ли Юэ", "Монштадт",
-            "Лук", "Катализатор", "Меч", "Двуручный меч",
-            "Гидро", "Пиро", "Электро", "Дендро"};
-    String[] TrueAnswers = { "Гидро", "Кэ цин", "Ци-ци", "Монштадт", "Меч", "Пиро"};
-    public int iter = 0;
+String[] questioins = {"Яке Око Бога у Мони?",
+        "Кого називають \"Нефритова Рівновага Групи Цисін\"?",
+        "Учениця і збирачка трав з хижі Бубу - це?..",
+        "З якого регіону Мона?",
+        "Якою зброєю користується Джинн?",
+        "Яке Око Бога у Ділюка?"};
+String[] answers = { "Анемо", "Піро", "Електро", "Гідро",
+        "Ке Цін", "Мона", "Ці-ці", "Ембер",
+        "Ділюк", "Ці-ці", "Мона", "Розарія",
+        "Розлом", "Інадзума", "Лі Юе", "Монштадт",
+        "Лук", "Каталізатор", "Меч", "Двосічний меч",
+        "Гідро", "Піро", "Електро", "Дендро"};
+String[] TrueAnswers = { "Гідро", "Ке Цін", "Ці-ці", "Монштадт", "Меч", "Піро"};
+public int iter = 0;
+
     public int iter2 = 0;
     boolean bool = false;
     public int rez = 0;
@@ -70,7 +71,7 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         TextView selection = findViewById(R.id.selection);
         boo = 0;
         RadioGroup radGrp = (RadioGroup)findViewById(R.id.radios);
-        selection.setText("Вопрос №" + (iter+1) + "/6\n"+ questioins[iter]);
+        selection.setText("Питання №" + (iter+1) + "/6\n"+ questioins[iter]);
         radioButton1.setText(answers[iter2]);
         radioButton2.setText(answers[iter2 + 1]);
         radioButton3.setText(answers[iter2 + 2]);
@@ -134,7 +135,7 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 }
                 if(iter < 5) {
                     iter2 += 4;
-                    selection.setText("Вопрос №" + (iter + 2) + "/6\n" + questioins[iter + 1]);
+                    selection.setText("Питання №" + (iter + 2) + "/6\n" + questioins[iter + 1]);
                     radioButton1.setText(answers[0 + iter2]);
                     radioButton2.setText(answers[1 + iter2]);
                     radioButton3.setText(answers[2 + iter2]);
@@ -144,7 +145,7 @@ window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                     bool = false;
                 }
                 else {
-                    button.setText("Показать результаты");
+                    button.setText("Показати результати");
                 }
                 iter += 1;
             }
