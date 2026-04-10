@@ -19,5 +19,5 @@ Serves as an in-game reference guide for Genshin Impact players.
 ## Screenshots
 
 ## Notes
-This is an old university project (~2021–2022). 
+This is an university project (~2021–2022). 
 The codebase reflects my early Android development experience.
